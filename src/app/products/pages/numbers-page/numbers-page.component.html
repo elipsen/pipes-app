@@ -1,1 +1,28 @@
-<p>numbers-page works!</p>
+<!-- Este estilo del p-panel se aplica a toda la página -->
+<p-panel header="Pipes numéricos" class="p-2">
+  <h1>Pipes numéricos</h1>
+  <p>Pipes incluidos en Angular - Usuarlmente en el Common Module</p>
+</p-panel>
+
+<div class="grid">
+  <!-- Con esta clase decimos que, para dispositivos moviles usamos col-12, para pantallas medianas (md) usamos col-6
+  y para pantallas grandes (lg) usamos col-4 -->
+  <div class="col-12 md:col-6 lg:col-4">
+    <p-card header="Ventas Netas" subheader="del presente año">
+      <!-- En number, la mascara que indica 1.2-2 significa que queremos el entero y la parte decimal, minimo 2 y máximo 2 -->
+      {{ totalSells + 1235 | number:'1.2-2' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año">
+      {{ totalSells | currency:'EUR':'symbol-narrow':'1.6-6' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año">
+      {{ percent | percent:'1.2-2' }}
+    </p-card>
+  </div>
+</div>
