@@ -4,6 +4,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { CardModule } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
+import { ToolbarModule } from 'primeng/toolbar';
+import { TableModule } from 'primeng/table';
 
 // Esto lo hacemos para centralizar un modulo con todos los componentes de primeNG que vamos a utilizar para la aplicación
 // Esta técnica mejora la legibilidad del código, aunque en determinados casos estos modulos de primeNG se pueden importar
@@ -13,10 +15,12 @@ import { PanelModule } from 'primeng/panel';
   imports: [],
   exports: [
     ButtonModule,
-    MenubarModule,
     CardModule,
     FieldsetModule,
-    PanelModule
+    MenubarModule,
+    PanelModule,
+    TableModule,
+    ToolbarModule
   ]
 })
 export class PrimeNgModule { }
